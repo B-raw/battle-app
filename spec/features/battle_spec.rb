@@ -27,3 +27,12 @@ feature "Attacking" do
     expect(page).to have_text("Michael HP: 50")
   end
 end
+
+feature "Switching turns" do
+  scenario "Player 1 attacks, then switch turns and player 2 attacks" do
+    sign_in_and_play
+    click_button 'Attack'
+    expect(page).to have_text("Michael's turn to attack")
+
+  end
+end

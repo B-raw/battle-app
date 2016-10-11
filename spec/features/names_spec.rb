@@ -8,6 +8,6 @@ feature "Names form" do
     fill_in "player_two_name", :with => "Michael"
     click_button "Submit names"
 
-    expect(page).to have_text("Jennifer Michael")
+    expect(page).to have_text("Jennifer Vs. Michael")
   end
 end

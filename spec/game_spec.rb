@@ -12,5 +12,9 @@ describe Game do
       expect(dave).to receive(:reduce_health)
       subject.attack(dave)
     end
+
+    it "changes dave's health by 10" do
+      expect{subject.attack(dave)}.to change{dave.health}.by (-10)
+    end
   end
 end

@@ -1,4 +1,4 @@
-
+require 'spec_helper'
 
 feature "Names form" do
   scenario "User can input their name" do
@@ -8,6 +8,6 @@ feature "Names form" do
     fill_in "player_two_name", :with => "Michael"
     click_button "Submit names"
 
-    expect(page).to have_text("Players created")
+    expect(page).to have_text("Jennifer Michael")
   end
 end

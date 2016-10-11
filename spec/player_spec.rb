@@ -1,3 +1,5 @@
+require 'player'
+
 describe Player do
 
   subject { described_class.new("Jen") }

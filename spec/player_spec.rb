@@ -15,4 +15,10 @@ describe Player do
       expect(subject.health).to eq 60
     end
   end
+
+  describe '#reduce_health' do
+    it 'will reduce player health points when attacked' do
+      expect(subject.reduce_health).to eq 50
+    end
+  end
 end

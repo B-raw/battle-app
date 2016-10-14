@@ -36,11 +36,19 @@ body {
   border: 1px solid #0066ff;
 }
 
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
 /* INDEX FORM */
 
-form {
+.index_form {
   text-align: center;
-  padding-top: 10px;
+  padding-top: 80px;
 }
 
 input {
@@ -57,10 +65,40 @@ label {
   padding: 20px
 }
 
+h1 {
+  margin: 30px 0;
+  font-family: EA_Sports;
+}
 
+/* PLAY */
 
+.versus_banner, .turn {
+  display: block;
+  text-align: center;
+}
 
+.player_1 {
+  float:left;
+  text-align: center;
+}
 
+.player_2 {
+  float: right;
+  text-align: center;
+}
+
+.container {
+  margin: 20px auto;
+  width: 50%;
+}
+
+img {
+  width: 200px;
+}
+
+form {
+  text-align: center;
+}
 
 
 

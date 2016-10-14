@@ -3,8 +3,11 @@
 </head>
 <body>
   <div id="page_title">
-    <h1 class="red">MMA Battle</h1>
+    <h1>Muay Thai Battle!</h1>
   </div>
+  <% unless @game.nil?%>
+    <h1 class="versus_banner"><%= @game.player_1.name %> vs. <%= @game.player_2.name %></h1>
+  <%end%>
 
   <%= yield %>
 </body>

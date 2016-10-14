@@ -1,11 +1,20 @@
 <!-- Title -->
-<h1><%= @game.player_1.name %> vs. <%= @game.player_2.name %></h1>
+<div class="container">
+  <div class="player_1">
+    <img src="kicker.jpeg"/>
+    <h2><%= @game.player_1.name %> </h2>
+    <h2>Hit Points: <%= @game.player_1.hit_points %> </h2>
+  </div>
+  <div class="player_2">
+    <img src="kneer.png"/>
+    <h2><%= @game.player_2.name %> </h2>
+    <h2>Hit Points: <%= @game.player_2.hit_points %> </h2>
+  </div>
+  <div class="clearfix"></div>
 
-<h2><%= @game.player_1.name %> HP: <%= @game.player_1.hit_points %> </h2>
-<h2><%= @game.player_2.name %> HP: <%= @game.player_2.hit_points %> </h2>
 
-<h2><%= @game.turn.current_turn.name %>'s turn</h2>
-
+  <h2 class="turn"><%= @game.turn.current_turn.name %>'s turn</h2>
+</div>
 <form>
-  <button type="submit" formaction="/attack"> Attack </button>
+  <button class="button" type="submit" formaction="/attack"> Attack </button>
 </form>
